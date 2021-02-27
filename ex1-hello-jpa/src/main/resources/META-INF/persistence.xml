@@ -6,7 +6,7 @@
 		http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
     version="2.2">
 
-    <persistence-unit name="hello">
+    <persistence-unit name="jpabook">
         <class>hellojpa.Member</class>
         <properties>
 
@@ -20,7 +20,10 @@
             <!-- 옵션 -->
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
+            <!-- 쿼리를 출력할 때 주석도 함께 출력한다. -->
             <property name="hibernate.use_sql_comments" value="true" />
+            <!-- JPA 표준에 맞춘 새로운 키 생성 전략을 사용한다. -->
+            <property name="hibernate.id.new_generator_mappings" value="true"/>
             <!--<property name="hibernate.hbm2ddl.auto" value="create" />-->
         </properties>
 
